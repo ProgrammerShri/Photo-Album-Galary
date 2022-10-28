@@ -18,9 +18,9 @@ const Photo = (props) => {
   const thumbnailStyle = {
     cursor: "zoom-in",
     display: "block",
-    height: "120px",
+    height: "300px",
     padding: "0 0 20px 20px",
-    width: "180px",
+    width: "300px",
   };
   const fullScreenStyle = {
     bottom: 0,
@@ -121,6 +121,10 @@ class Nav extends React.Component {
         this.setState({ images: [] });
       }
     });
+  };
+
+  addPhoto = (photo) => {
+    this.setState({ images: [...this.state.images, photo] });
   };
 
   render() {
